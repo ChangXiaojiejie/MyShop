@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <link rel="stylesheet" href="./css/productlist.css">
+
+  <title>商品列表</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 慢慢买头部 -->
+    <div class="m_top">
+      <!-- mheader 顶部栏 -->
+      <header class="m_header">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="" />
+        </a>
+        <i class="down"><img src="./images/header_app.png" alt="" /></i>
+      </header>
+      <!-- minput 顶部搜索框 -->
+      <div class="m_input">
+        <input type="text" class="mt_inp" placeholder="请输入你想要比价的商品" />
+        <button class="mt_serBtn">搜索</button>
+      </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="mm_product_list">
+      <div class="list_title">
+        <a href="index.html">首页></a>
+
+        <a href="category.html">全部分类></a>
+        <span class="pro_name"></span>
+
+
+        <a href="#" class="active">筛选</a>
+      </div>
+
+      <div class="list_info">
+        <ul>
+          <li>
+            <a href="javascript:;">
+              <div class="left">
+                <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png" alt="">
+              </div>
+              <div class="right">
+                <div class="info_title txt-cut">
+                  乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视
+                  <p class="price">￥1999.00</p>
+                </div>
+                <div class="info_other">
+                  <span class="mall">报价(6)</span>
+                  <span class="num">评论(2286)</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="list_pages">
+        <span class="pro_page"> <a href="javascript:;">上一页</a>
+        </span>
+        <span>
+          <select name="" id="page">
+            <!-- <option class="op1" value="1/3">1/3</option>
+            <option class="op1" value="2/3">2/3</option>
+            <option class="opt1" value="3/3">3/3</option> -->
+          </select>
+        </span>
+        <span class="next_page"><a href="javascript:;">下一页</a></span>
+      </div>
+    </div>
+    <!-- 超值推荐 -->
+
+
+    <!-- 更多优惠信息 -->
+
+
+    <!-- 品牌排行 -->
+
+
+    <!-- 慢慢买尾部 -->
+    <footer class="m_footer">
+      <div class="mft_bts clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;"> <i></i> 返回顶部</a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="m_ft-msg">
+        <p class="mt_p1">
+          <a href="javascrip:;" class="bt_app">
+            手机APP下载
+          </a>
+          <a href="javascript:;" class="bt_mobil">
+            慢慢买手机版
+          </a>
+          <span>--掌上比价平台</span>
+        </p>
+        <p class="mt_p2">m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 设置菜单栏的模板引擎 -->
+  <script type="text/html" id="pro_name_tpl">
+    {{each result v i}}
+
+      <a href="javascript:;">{{v.category}}</a>
+
+    {{/each}}
+    
+    </script>
+
+  <!-- 商品的数据 -->
+  <script type="text/html" id="ductlist_tpl">
+
+    {{each result v i}}
+      <li>
+        <a href="bijia.html?categoryid={{v.categoryId}}&productid={{v.productId}}">
+          <div class="left">
+            {{@v.productImg}}
+          </div>
+          <div class="right">
+            <div class="info_title txt-cut">
+                {{v.productName}}
+              <p class="price">{{v.productPrice}}</p>
+            </div>
+            <div class="info_other">
+                <span class="mall">{{v.productQuote}}</span>
+                <span class="num">{{v.productCom}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+  </script>
+
+  <!-- 渲染分页下拉的 -->
+  <script type="text/html" id="page_tpl"> 
+    <% for(var i=0 ; i< maxPage; i++){%>
+
+
+      <option value="{{i+1}}" {{i == currPage-1 ? 'selected':''}}>{{i+1}}/{{maxPage}}</option>
+
+
+
+
+    <% } %>
+    
+  
+    
+  </script>
+
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/productlist.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" /> -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./font/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./css/brandTitle.css" />
+
+
+  <title>品牌大全</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 慢慢买头部 -->
+    <div class="m_top">
+      <!-- mheader 顶部栏 -->
+      <header class="m_header">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="" />
+        </a>
+        <i class="down"><img src="./images/header_app.png" alt="" /></i>
+      </header>
+      <!-- minput 顶部搜索框 -->
+      <div class="m_input">
+        <input type="text" class="mt_inp" placeholder="请输入你想要比价的商品" />
+        <button class="mt_serBtn">搜索</button>
+      </div>
+    </div>
+
+    <div class="list_title">
+      <a href="index.html">首页</a>
+      <span>></span>
+      <a href="category.html">全部分类</a>
+    </div>
+
+    <div class="mm_remain">
+      <div class="title">
+          热门品牌排行
+      </div>
+    </div>
+
+    <!-- 分类页面 -->
+    <div class="m_category">
+      <ul class="clearfix">
+        <li class="">
+          <a href="javascript:;" class="">
+            <span>大家电</span>
+            <i class="fa fa-chevron-down"></i>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <!-- 慢慢买尾部 -->
+    <footer class="m_footer">
+      <div class="mft_bts clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;"> <i></i> 返回顶部</a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="m_ft-msg">
+        <p class="mt_p1">
+          <a href="javascrip:;" class="bt_app">
+            手机APP下载
+          </a>
+          <a href="javascript:;" class="bt_mobil">
+            慢慢买手机版
+          </a>
+          <span>--掌上比价平台</span>
+        </p>
+        <p class="mt_p2">m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <script type="text/html" id="list_tpl">
+    {{each result v i}}
+
+      <li class="">
+        <a href="brand.html?brandtitleid={{v.brandTitleId}}" class="">
+          <span>{{v.brandTitle}}</span>
+          <i class="fa fa-chevron-down"></i>
+        </a>
+      </li>
+    {{/each}}
+  </script>
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/brandTitle.js"></script>
+</body>
+
+</html>

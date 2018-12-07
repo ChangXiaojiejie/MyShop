@@ -1,0 +1,60 @@
+html,
+body {
+  height: 100%;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.m_nav {
+  background-color: #fff;
+  margin-top: 0.37rem;
+}
+.m_nav ul {
+  overflow: hidden;
+  padding: 0.37rem 0;
+}
+.m_nav li {
+  width: 25%;
+  float: left;
+}
+.m_nav li a {
+  width: 100%;
+  padding-top: .13rem;
+  display: block;
+  text-align: center;
+}
+.m_nav li a p {
+  height: 0.58rem;
+  line-height: 0.58rem;
+  font-size: 0.3rem;
+}
+.m_nav li:nth-child(n+9) {
+  display: none;
+}
+.m_nav img {
+  width: 1.36rem;
+  margin: 0 auto;
+  display: block;
+}
+.m_product {
+  margin-top: 0.37rem;
+}
+.m_more {
+  width: 100%;
+  padding: 0 0.19rem;
+  background-color: #fff;
+}
+.m_more a {
+  width: 100%;
+  height: 1.11rem;
+  background-image: linear-gradient(#ffffff, #f4f4f4);
+  display: block;
+  border-radius: .19rem;
+  font-size: .44rem;
+  text-align: center;
+  line-height: 1.11rem;
+  margin-top: .19rem;
+  border: 3px solid #f1f1f1;
+}

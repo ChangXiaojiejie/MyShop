@@ -1,0 +1,13 @@
+.m_header {
+  padding-left: .8rem;
+}
+.m_header .m_title {
+  transform: translateX(0);
+}
+.m_header .m_back a i {
+  left: 0;
+  top: .4rem;
+}
+.container .mp_list ul li {
+  list-style: none;
+}

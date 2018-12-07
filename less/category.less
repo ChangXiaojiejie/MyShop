@@ -1,0 +1,64 @@
+
+// 分类的样式
+.m_category{
+  width: 100%;
+  ul{
+    overflow: hidden;
+    border: 0.02rem solid #c4c4c4;
+    border-radius: .09rem;
+    li{
+      float: left;
+      width: 100%;
+     a{
+       display: block;
+       height: 1.04rem;
+       background-color: #f1f1f1;
+      //  padding-left: .28rem;
+       position: relative;
+       border: .01rem solid #c4c4c4;
+
+       span{
+         display: block;
+         font-size: .32rem;
+         font-weight: 700;
+         color: #333;
+         line-height: 1.04rem;
+         margin-left: .37rem;
+       }
+       i{
+         width: 20px;
+         height: 20px;
+         font-size: .32rem;
+         color: #333;
+         position: absolute;
+         right: .56rem;
+         top: .33rem;
+       }
+
+     }
+     ul{
+       overflow: hidden;
+       display: none;
+       li{
+         width: 33.33%;
+         a{
+           display: block;
+           height: 1.48rem;
+           background-color: #f1f1f1;
+           border-bottom: .02rem solid #c4c4c4;
+           border-right: .01rem solid #c4c4c4;
+           text-align: center;
+           line-height: 1.48rem;
+           font-size: .37rem;
+         }
+       }
+     }
+     &.active ul{
+      display: block;
+     }
+
+   
+
+    }
+  }
+}

@@ -1,0 +1,131 @@
+.product_bijia {
+  width: 100%;
+  height: 6.67rem;
+  position: relative;
+}
+.product_bijia .pro_title {
+  width: 100%;
+  height: 2rem;
+  margin: .13rem 0;
+}
+.product_bijia .pro_title {
+  text-align: center;
+  font-size: .48rem;
+  height: 2rem;
+  color: black;
+  padding: .63rem .57rem 0;
+}
+.product_bijia .pro_img {
+  width: 100%;
+}
+.product_bijia .pro_img img {
+  width: 4.27rem;
+  height: 4.27rem;
+  margin: 0 auto;
+}
+.product_bijia .m_coll {
+  width: 1.07rem;
+  height: 1.07rem;
+  background-color: lime;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.07rem;
+  position: absolute;
+  right: .53rem;
+  bottom: .27rem;
+  color: #fff;
+  font-size: .4rem;
+}
+.mm_tab {
+  width: 100%;
+  height: .93rem;
+  border-top: 1px solid #b32b00;
+  border-bottom: 1px solid #b32b00;
+}
+.mm_tab span {
+  display: block;
+  width: 33.33%;
+  height: 100%;
+  background-color: #ffc833;
+  float: left;
+  text-align: center;
+  line-height: .91rem;
+  border-right: 1px solid #b32b00;
+}
+.mm_tab span:first-child {
+  background-color: #ff9b19;
+}
+.mm_tab span:last-child {
+  border-right: none;
+}
+.mm_tab a {
+  display: block;
+  font-size: .37rem;
+}
+.mm_price {
+  width: 100%;
+  height: 1.13rem;
+  padding-left: .93rem;
+  font-size: .32rem;
+  line-height: 1.07rem;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.mm_price .shop {
+  float: left;
+}
+.mm_price .price {
+  float: right;
+  width: 2rem;
+  height: 1.07rem;
+  display: block;
+  margin-right: .13rem;
+  color: #cd0117;
+}
+.mm_price .go_price {
+  float: right;
+  width: 1.73rem;
+  height: 1.07rem;
+  display: block;
+}
+.mm_price .go_price a {
+  width: 1.6rem;
+  height: .67rem;
+  display: block;
+  margin-top: .2rem;
+  line-height: .67rem;
+  color: #fff;
+  background-color: #ff5500;
+  border-radius: .07rem;
+}
+.mm_price img {
+  width: .47rem;
+  height: .47rem;
+  position: absolute;
+  left: .26rem;
+  top: .26rem;
+}
+.m_nots {
+  width: 100%;
+  height: 1.47rem;
+  padding: .27rem .2rem;
+  font-size: .32rem;
+  color: #808385;
+}
+.mm_comment .commomt_title {
+  width: 100%;
+  height: .93rem;
+  background-color: #dbdbdb;
+  border-top: .03rem solid #606060;
+  text-align: center;
+  font-size: .32rem;
+  line-height: .88rem;
+}
+.mm_comment .commomt_info ul {
+  overflow: hidden;
+}
+.mm_comment .commomt_info ul li {
+  border-bottom: 1px solid #c4c4c4;
+  padding: .2rem .2rem .07rem;
+}

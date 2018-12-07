@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <link rel="stylesheet" href="./css/productlist.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+
+  <title>比价</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 慢慢买头部 -->
+    <div class="m_top">
+      <!-- mheader 顶部栏 -->
+      <header class="m_header">
+        <a href="index.html">
+          <img src="./images/header_logo.png" alt="" />
+        </a>
+        <i class="down"><img src="./images/header_app.png" alt="" /></i>
+      </header>
+      <!-- minput 顶部搜索框 -->
+      <div class="m_input">
+        <input type="text" class="mt_inp" placeholder="请输入你想要比价的商品" />
+        <button class="mt_serBtn">搜索</button>
+      </div>
+    </div>
+
+    <!-- 导航栏 -->
+
+    <div class="mm_product_list">
+      <div class="list_title">
+        <a href="index.html">首页></a>
+
+        <span class="secondary"></span>
+        
+        <span class="three"></span> 
+
+
+        <a href="#" class="active">筛选</a>
+      </div>
+    </div>
+
+    <!-- 比价商品 -->
+    <div class="product_bijia">
+      <!-- 玩个坑 -->
+      <!-- <div class="pro_title">苹果Apple iPhone7 Plus (A1661) 32G玫瑰金色 全网通4G手机
+      </div>
+      <div class="pro_img">
+        <img src="http://pro.zuyushop.com:8015/ProPic/20169/Thumb/Thumb_2016090009323065176.png" alt="">
+      </div>
+      <span class="m_coll">收藏</span> -->
+
+    </div>
+
+    <!-- 比价 -->
+    <div class="mm_tab">
+      <span><a href="javascript:;">比价购买</a></span>
+      <span><a href="javscript:;">产品参数</a></span>
+      <span><a href="javscript:;">评价</a></span>
+    </div>
+
+    <!-- 价钱 -->
+    <div class="mm_price">
+      <img src="http://sf.manmanbuy.com/images/sitelogo/13.png" alt="">
+      <span class="shop">1号店</span>
+      <span class="go_price"><a href="javascript:;">去购买</a></span>
+      <span class="price">￥6488.00</span>
+
+    </div>
+
+    <div class="m_nots">
+      * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+
+    <div class="mm_comment">
+      <div class="commomt_title">
+        网友评价
+      </div>
+      <div class="commomt_info">
+        <ul>
+          <!-- 玩个坑 -->
+          <!-- <li>
+            <div class="clearfix">
+              <span class="com-name fl">137*****21</span>
+              <span class="com-time fr">2016/10/14</span>
+            </div>
+            <div class="clearfix"><span class="fr">购买自：苏宁易购</span></div>
+            <div class="com-content">
+              特意用了十来天再来评论。玫瑰金真是美美哒！系统还是一如既往的流畅，电池的续航能力感觉好多了，轻度使用的话，一天多不成问题。外放的音量很大，音质也还不错。拍照画质也很好。唯一觉得不足的是，在室内手机信号好像一直都是一格，但不影响使用就是了
+            </div>
+          </li> -->
+          
+        </ul>
+      </div>
+    </div>
+
+    <!-- 获取更多 -->
+    <div class="m_more"></div>
+
+
+
+
+
+
+
+
+
+
+    <!-- 超值推荐 -->
+
+
+    <!-- 更多优惠信息 -->
+    <section class="m_more">
+        <a href="javascrpt:;">
+          更多优惠信息>>
+        </a>
+      </section>
+
+
+    <!-- 品牌排行 -->
+
+
+    <!-- 慢慢买尾部 -->
+    <footer class="m_footer">
+      <div class="mft_bts clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;"> <i></i> 返回顶部</a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="m_ft-msg">
+        <p class="mt_p1">
+          <a href="javascrip:;" class="bt_app">
+            手机APP下载
+          </a>
+          <a href="javascript:;" class="bt_mobil">
+            慢慢买手机版
+          </a>
+          <span>--掌上比价平台</span>
+        </p>
+        <p class="mt_p2">m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 渲染二级列表 -->
+
+  <script  type="text/html" id="send_tpl" >
+    
+    {{each result v i}}
+      <a  href="productlist.html?categoryid={{v.categoryId}}&value={{v.category}}">{{v.category}}></a>
+    {{/each}}
+  </script>
+
+
+
+
+  <!-- 三级列表渲染 -->
+  <script type="text/html" id="three_tpl">
+   
+      <a  href="javascript:;">{{list}}</a>
+    
+  </script>
+
+  <!-- 商品图片展示 -->
+  <script type="text/html" id="pro_tpl">
+
+    {{each result v i}}
+
+      <div class="pro_title">
+        {{v.productName}}
+        </div>
+        <div class="pro_img">
+         {{@v.productImg}}
+        </div>
+        <span class="m_coll">收藏</span>
+      
+    {{/each}}
+  
+  
+  </script>
+
+  <!-- 网友评价渲染模板 -->
+  <script type="text/html" id="pro_com_tpl">
+    {{each result v i}}
+     
+      <li>
+        <div class="clearfix">
+          <span class="com-name fl">{{v.comName}}</span>
+          <span class="com-time fr">{{v.comTime}}</span>
+        </div>
+        <div class="clearfix"><span class="fr">{{v.comFrom}}</span></div>
+        <div class="com-content">
+          {{v.comContent}}
+        </div>
+      </li>
+      
+    {{/each}}
+    
+    </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/common.js"></script>
+
+  <script src="./js/index.js"></script>
+  <script src="./js/bjjia.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+.m_header {
+  width: 100%;
+  height: 1.32rem;
+  background-color: #FF841D;
+  position: relative;
+  padding-right: .93rem;
+}
+.m_header .m_back {
+  width: .39rem;
+  height: 1.32rem;
+  position: absolute;
+  top: 0;
+  left: .4rem;
+  line-height: 1.32rem;
+  font-size: .53rem;
+}
+.m_header .m_back i {
+  color: #fff;
+}
+.m_header .m_title {
+  font-size: .6rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.32rem;
+}
+.m_header .down {
+  position: absolute;
+  top: .13rem;
+  right: .13rem;
+  width: 1.04rem;
+  height: 1.04rem;
+}
+.m_header .down img {
+  width: 100%;
+  display: block;
+}
+.m_footer {
+  padding: .93rem 0;
+  background-color: #f1f1f1;
+}
+.m_footer .mft_bts {
+  width: 100%;
+  padding: 0 .19rem;
+  height: .8rem;
+  border-top: .03rem solid #c4c4c4;
+  border-bottom: .03rem solid #c4c4c4;
+}
+.m_footer .mft_bts a {
+  float: left;
+  width: 33.33%;
+  display: block;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  font-size: .4rem;
+  border-right: .03rem solid #c4c4c4;
+}
+.m_footer .mft_bts a:last-child {
+  border-right: none;
+}
+.m_footer .m_ft-msg {
+  margin-top: .56rem;
+  color: #5b6168;
+}
+.m_footer .m_ft-msg p {
+  height: .56rem;
+  line-height: .56rem;
+  text-align: center;
+  font-size: .37rem;
+}
+.m_footer .m_ft-msg .bt_app {
+  color: red;
+}
+.m_footer .m_ft-msg .bt_mobil {
+  color: #333;
+}
+.mm_nav_content {
+  width: 100%;
+  padding-top: .13rem ;
+  padding-bottom: .4rem;
+  background-color: #fff;
+}
+.mm_nav_content .ul_content {
+  width: 6rem;
+  margin: 0 auto;
+}
+.mm_nav_content .ul_content ul {
+  overflow: hidden;
+}
+.mm_nav_content .ul_content ul li {
+  margin-top: .13rem;
+  margin-right: .2rem;
+  padding: .13rem .13rem;
+  float: left;
+  border: 2px solid #c4c4c4;
+  background-color: #f4f4f4;
+}
+.mm_nav_content .ul_content ul li a {
+  display: block;
+  font-size: .32rem;
+  height: 100%;
+  overflow: hidden;
+}
+.mm_nav_content .ul_content ul li a img {
+  width: .47rem;
+  height: .47rem;
+  display: block;
+  float: left;
+}
+.mm_nav_content .ul_content ul li a span {
+  float: left;
+  margin-left: .13rem;
+}

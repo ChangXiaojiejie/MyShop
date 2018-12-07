@@ -1,0 +1,14 @@
+.cont_title {
+  background-color: #fff;
+}
+.cont_title .big_img {
+  width: 6rem;
+  height: 6rem;
+  margin-top: .4rem;
+  margin-bottom: .27rem;
+}
+.cont_title .big_img img {
+  width: 100%;
+  display: block;
+  height: 100%;
+}

@@ -1,0 +1,56 @@
+.m_category {
+  width: 100%;
+}
+.m_category ul {
+  overflow: hidden;
+  border: 0.02rem solid #c4c4c4;
+  border-radius: .09rem;
+}
+.m_category ul li {
+  float: left;
+  width: 100%;
+}
+.m_category ul li a {
+  display: block;
+  height: 1.04rem;
+  background-color: #f1f1f1;
+  position: relative;
+  border: .01rem solid #c4c4c4;
+}
+.m_category ul li a span {
+  display: block;
+  font-size: .32rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.04rem;
+  margin-left: .37rem;
+}
+.m_category ul li a i {
+  width: 20px;
+  height: 20px;
+  font-size: .32rem;
+  color: #333;
+  position: absolute;
+  right: .56rem;
+  top: .33rem;
+}
+.m_category ul li ul {
+  overflow: hidden;
+  display: none;
+}
+.m_category ul li ul li {
+  width: 33.33%;
+}
+.m_category ul li ul li a {
+  display: block;
+  height: 1.48rem;
+  background-color: #f1f1f1;
+  border-bottom: .02rem solid #c4c4c4;
+  border-right: .01rem solid #c4c4c4;
+  text-align: center;
+  line-height: 1.48rem;
+  font-size: .37rem;
+}
+.m_category ul li.active ul {
+  display: block;
+}

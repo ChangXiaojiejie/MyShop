@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./font/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/moneyctrl.css" />
+
+  <title>省钱控</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 慢慢买头部 -->
+    <div class="m_top">
+      <!-- mheader 顶部栏 -->
+      <header class="m_header">
+        <div class="m_back">
+          <a href="javascript: history.back();">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+        </div>
+        <div class="m_title">
+          省钱控-最新优惠
+        </div>
+
+        <i class="down"><img src="./images/header_app.png" alt="" /></i>
+      </header>
+      <!-- minput 顶部搜索框 -->
+      <div class="m_input">
+        <input type="text" class="mt_inp" placeholder="请输入你想要比价的商品" />
+        <button class="mt_serBtn">搜索</button>
+      </div>
+    </div>
+
+    <!-- 产品展示区 -->
+    <div class="mp_list">
+      <ul>
+        <!-- 挖个坑 -->
+        <!-- <li>
+          <a href="javascript:;" class="clearfix">
+            <div class="list_left">
+              <img src="./images/jiangyou.jpg" alt="" />
+            </div>
+            <div class="list_right">
+              <div class="list_title txt-cut">
+                移动端凑单品：海天 鲜味 生抽 1.28L <span>10.9元</span>
+              </div>
+              <div class="list_other">
+                <span class="oth_info">京东商城 | 10-25 14:10</span>
+                <span class="oth_say"
+                  ><i class="icon-comment"></i> 有1人评论</span
+                >
+              </div>
+            </div>
+          </a>
+        </li> -->
+
+      </ul>
+    </div>
+
+
+    <div class="list_pages">
+      <span class="pro_page"> <a href="javascript:;">上一页</a>
+      </span>
+      <span>
+        <select name="" id="page">
+          <!-- <option class="op1" value="1/3">1/3</option>
+          <option class="op1" value="2/3">2/3</option>
+          <option class="opt1" value="3/3">3/3</option> -->
+        </select>
+      </span>
+      <span class="next_page"><a href="javascript:;">下一页</a></span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 慢慢买尾部 -->
+    <footer class="m_footer">
+      <div class="mft_bts clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;"> <i></i> 返回顶部</a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="m_ft-msg">
+        <p class="mt_p1">
+          <a href="javascrip:;" class="bt_app">
+            手机APP下载
+          </a>
+          <a href="javascript:;" class="bt_mobil">
+            慢慢买手机版
+          </a>
+          <span>--掌上比价平台</span>
+        </p>
+        <p class="mt_p2">m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 分页下拉渲染 -->
+
+  <script type="text/html" id="page_tpl">
+    
+    <% for(var i=0 ; i< maxPage; i++){%>
+
+      <option value="{{i}}" {{i == currPage ? 'selected':''}}>{{i+1}}/{{maxPage}}</option>
+
+    <% } %>
+  
+  
+  
+  </script>
+
+
+  <!-- 渲染商品数据的模板 -->
+  <script type="text/html" id="pro_tpl">
+
+    {{each result v i}}
+
+      <li>
+        <a href="moneyproduct.html?productid={{v.productId}}" class="clearfix">
+          <div class="list_left">
+            {{@v.productImg2}}
+          </div>
+          <div class="list_right">
+            <div class="list_title txt-cut">
+              {{v.productName}} <span>{{v.productPinkage}}</span>
+            </div>
+            <div class="list_other">
+              <span class="oth_info">{{v.productFrom}}|{{v.productTime}}</span>
+              <span class="oth_say"
+                ><i class="icon-comment"></i> {{v.productComCount}}</span
+              >
+            </div>
+          </div>
+        </a>
+      </li>
+
+
+  
+  
+    {{/each}}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/moneyctrl.js"></script>
+</body>
+
+</html>

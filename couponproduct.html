@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./font/css/font-awesome.css">
+  <!-- <link rel="stylesheet" href="../css/common.css" /> -->
+  <link rel="stylesheet" href="./css/coupon.css">
+  <link rel="stylesheet" href="./css/couponproduct.css" />
+
+  <title>肯德基优惠券</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 慢慢买头部 -->
+    <div class="m_top">
+      <!-- mheader 顶部栏 -->
+      <header class="m_header">
+        <div class="m_back">
+          <a href="javascript:history.back();">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+        </div>
+        <div class="m_title">
+          优惠券
+        </div>
+
+        <i class="down"><img src="./images/header_app.png" alt="" /></i>
+      </header>
+      <!-- minput 顶部搜索框 -->
+
+    </div>
+
+    <div>
+
+    </div>
+    <div class="mm_coupon_title">
+      <div class="test"></div>
+    </div>
+
+
+    <!-- 折扣区 -->
+    <div class="mm_ken_content">
+      <p class="notes">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+      <ul class="ken_info">
+        <!-- 玩个坑 -->
+        <!-- <li class="clearfix">
+          <div class="img fl">
+            <img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=" 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券">
+          </div>
+          <div class="info_right">
+            <p class="txt">C27 两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券</p>
+            <p class="price">￥ 28</p>
+            <div class="time">有效期至10月31日</div>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+
+    <div class="mm_mask">
+        <div class="pic">
+            <img src="" alt="">
+        </div>
+        <span class="arrow_left fa fa-angle-left"></span>
+        <span class="arrow_right fa fa-angle-right"></span>
+    </div>
+
+
+
+
+
+
+
+    <!-- 慢慢买尾部 -->
+    <footer class="m_footer">
+      <div class="mft_bts clearfix">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:;"> <i></i> 返回顶部</a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="m_ft-msg">
+        <p class="mt_p1">
+          <a href="javascrip:;" class="bt_app">
+            手机APP下载
+          </a>
+          <a href="javascript:;" class="bt_mobil">
+            慢慢买手机版
+          </a>
+          <span>--掌上比价平台</span>
+        </p>
+        <p class="mt_p2">m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 渲染优惠券 -->
+  <script type="text/html" id="coup_tpl">
+    {{each result v i}}
+  
+      <li class="clearfix">
+        <div class="img fl">
+          {{@v.couponProductImg}}
+        </div>
+        <div class="info_right">
+          <p class="txt">{{v.couponProductName}}</p>
+          <p class="price">{{v.couponProductPrice}}</p>
+          <div class="time">{{v.couponProductTime}}</div>
+        </div>
+      </li>
+  
+  
+    {{/each}}
+  </script>
+
+
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./lib/template/template-web.js"></script>
+  <script src="./js/coupon.js"></script>
+  <script src="./js/couponproduct.js"></script>
+</body>
+
+</html>
